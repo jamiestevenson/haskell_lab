@@ -1,0 +1,10 @@
+
+-- This is a rewrite of the native 'contains' method
+member :: Eq a => a -> [a] -> Bool
+member _ [] = False
+member m (x:xs)
+  | m==x      = True
+  | otherwise = member m xs
+
+
+
